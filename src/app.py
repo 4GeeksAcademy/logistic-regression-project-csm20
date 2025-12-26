@@ -27,7 +27,7 @@ print(dfBank_raw.info())
 # Verify duplicates and NANs
 
 if dfBank_raw.duplicated().any().any():
-    dfBank = dfBank_raw.drop_duplicates()
+    dfBank_raw = dfBank_raw.drop_duplicates()
 
 if dfBank_raw.isna().any().any():
     dfBank_raw = dfBank_raw.dropna()
